@@ -255,10 +255,7 @@ void rainbow_effect()
 }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////
-// eeConfigRead                                                                      //
-// Fonction de lecture de la configuration EEPROM                                    //
-///////////////////////////////////////////////////////////////////////////////////////
+// read config in Eeprom
 bool eeConfigRead ( void ) {
 
   dataEeprom pvrConfig;
@@ -278,11 +275,7 @@ bool eeConfigRead ( void ) {
     return true;
   }
 }
-
-///////////////////////////////////////////////////////////////////////////////////////
-// eeConfigWrite                                                                     //
-// Fonction d'écriture de la configuration EEPROM                                    //
-///////////////////////////////////////////////////////////////////////////////////////
+// save config in Eeprom
 void eeConfigWrite ( void ) {
 
   dataEeprom pvrConfig;
@@ -295,6 +288,7 @@ void eeConfigWrite ( void ) {
   EEPROM.put ( PVR_EEPROM_START, pvrConfig );
 }
 
+// applies pwm outputs to control the R G B leds
 void led_change ( void ) {
       analogWrite(RED, R_I);
       analogWrite (GREEN, G_I);
