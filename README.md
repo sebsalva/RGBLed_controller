@@ -9,7 +9,7 @@ Inspired from the projet https://www.engineersgarage.com/how-to-build-an-ir-remo
 
 
 ## Controller made with :
-- An arduino uno
+- An arduino card( uno, nano, etc.)
 - A TSPO1738 IR receiver
 - A ULN2003A chip to control the leds (R, G, and B outputs)
 
